@@ -1,24 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Button, Grid } from "@mui/material";
+import { redirect, useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Grid container item>
+        <Button
+          onClick={() => {
+            navigate("/Zadanie1");
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          Zadanie 1
+        </Button>
+        <Button
+          onClick={() => {
+            navigate("/Zadanie2");
+          }}
+        >
+          Zadanie 2
+        </Button>
+        <Button
+          onClick={() => {
+            navigate("/Zadanie3");
+          }}
+        >
+          Zadanie 3
+        </Button>
+        <Button
+          onClick={() => {
+            navigate("/Zadanie4");
+          }}
+        >
+          Zadanie 4
+        </Button>
+      </Grid>
     </div>
   );
 }
