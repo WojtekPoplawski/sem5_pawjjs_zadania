@@ -8,6 +8,16 @@ import Zadanie1 from "./pages/tasks/Zadanie1";
 import Zadanie2 from "./pages/tasks/Zadanie2";
 import Zadanie3 from "./pages/tasks/Zadanie3";
 import Zadanie4 from "./pages/tasks/Zadanie4";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { CssBaseline } from "@mui/material";
+
+const theme = createTheme({
+  palette: {
+    background: {
+      default: "#92a49f",
+    },
+  },
+});
 
 const router = createBrowserRouter([
   {
@@ -37,7 +47,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

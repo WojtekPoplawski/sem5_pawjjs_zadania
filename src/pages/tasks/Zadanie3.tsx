@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@mui/material";
+import { Button, Grid, Paper, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const Zadanie3 = () => {
@@ -70,7 +70,7 @@ const Zadanie3 = () => {
     console.groupEnd();
   };
 
-  const fun = (array: Array<number>) => {
+  const fun = () => {
     console.groupCollapsed("Zadanie 3");
     if (array.length === 0) {
       array.push(Math.floor(Math.random() * 10) + 1);
@@ -90,8 +90,29 @@ const Zadanie3 = () => {
 
   return (
     <div>
-      <Button onClick={() => navigate(-1)}>Powrót</Button>
-      <Button onClick={() => fun(array)}>Start</Button>
+      <Grid item sx={{ margin: "8px", padding: "8px" }}>
+        <Typography variant="h3" sx={{ margin: "8px" }}>
+          Zadanie 3
+        </Typography>
+        <Paper>
+          <Grid sx={{ margin: "2px", padding: "2px" }}>
+            <Button
+              sx={{ marginRight: "2px" }}
+              variant="outlined"
+              onClick={() => navigate("/")}
+            >
+              Powrót
+            </Button>
+            <Button
+              sx={{ marginRight: "2px" }}
+              variant="outlined"
+              onClick={() => fun()}
+            >
+              Start
+            </Button>
+          </Grid>
+        </Paper>
+      </Grid>
     </div>
   );
 };

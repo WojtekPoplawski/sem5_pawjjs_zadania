@@ -1,7 +1,6 @@
 import React from "react";
-import { Button } from "@mui/material";
+import { Button, Grid, Paper, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { start } from "repl";
 
 const Zadanie4 = () => {
   const navigate = useNavigate();
@@ -58,8 +57,29 @@ const Zadanie4 = () => {
 
   return (
     <div>
-      <Button onClick={() => navigate(-1)}>Powrót</Button>
-      <Button onClick={() => fun()}>Start</Button>
+      <Grid item sx={{ margin: "8px", padding: "8px" }}>
+        <Typography variant="h3" sx={{ margin: "8px" }}>
+          Zadanie 4
+        </Typography>
+        <Paper>
+          <Grid sx={{ margin: "2px", padding: "2px" }}>
+            <Button
+              sx={{ marginRight: "2px" }}
+              variant="outlined"
+              onClick={() => navigate("/")}
+            >
+              Powrót
+            </Button>
+            <Button
+              sx={{ marginRight: "2px" }}
+              variant="outlined"
+              onClick={() => fun()}
+            >
+              Start
+            </Button>
+          </Grid>
+        </Paper>
+      </Grid>
     </div>
   );
 };
