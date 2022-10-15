@@ -1,6 +1,6 @@
 # Programowanie aplikacji w języku JavaScript
 **Autor : Wojciech Popławski, 105685**
-
+ * Kod zadań znajuje się w folderze ```src/pages/tasks```
 # Available Scripts
 
 In the project directory, you can run:
