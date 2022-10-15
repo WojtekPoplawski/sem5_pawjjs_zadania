@@ -1,8 +1,7 @@
-# Getting Started with Create React App
+# Programowanie aplikacji w języku JavaScript
+**Autor : Wojciech Popławski, 105685**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+# Available Scripts
 
 In the project directory, you can run:
 
