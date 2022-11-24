@@ -10,6 +10,7 @@ import Zadanie3 from "./pages/tasks/Zadanie3";
 import Zadanie4 from "./pages/tasks/Zadanie4";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
+import Zestaw3 from "./pages/tasks/Zestaw3";
 
 const theme = createTheme({
   palette: {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "/Zadanie4",
     element: <Zadanie4 />,
+  },
+  {
+    path: "/Zestaw3",
+    element: <Zestaw3 />,
   },
 ]);
 
